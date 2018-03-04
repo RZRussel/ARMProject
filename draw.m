@@ -1,4 +1,4 @@
-function draw(q, robot, legColor, jointColor)
+function draw(q, robot, jointRadius, legColor, jointColor)
 % Draws simple serial robot visualization for given joint coordinates.
 % It is assumed that rotation axis of joints is collinear with one ...
 % of the frame axis.
@@ -15,7 +15,7 @@ function draw(q, robot, legColor, jointColor)
             q(i)*joint.axis(2), q(i)*joint.axis(3), 0, 0, 0);
         H = H * R;
         drawSphere(prevOrigin(1), prevOrigin(2), prevOrigin(3), ...
-            0.5, jointColor);
+            jointRadius, jointColor);
     
         if ~isempty(joint.child)
             link = joint.child(1);
