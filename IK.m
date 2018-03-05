@@ -59,9 +59,9 @@ function q456 = IK456(T, q123, robot)
     
     eps = 1e-9;
     if abs(sin(gamma)) > eps
-        beta = atan2(T456(1,2), T456(1,1)*sin(gamma));
+        beta = atan2(T456(1,2) / sin(gamma), T456(1,1));
     else
-        beta = atan2(T456(1,3), T456(1,1)*cos(gamma));
+        beta = atan2(T456(1,3) / cos(gamma), T456(1,1));
     end
     
     q456 = [alpha; beta; gamma];

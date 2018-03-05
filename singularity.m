@@ -18,7 +18,10 @@ for q1=joint1.limit(1):q_step:joint1.limit(2)
               s_index = 1/cond(J);
               singularities_number = singularities_number + 1;
               singularities(singularities_number, 1:3) = T(1:3, 4).';
-              singularities(singularities_number, 4) = s_index;
+              
+              if s_index > singularities(singularities_number, 4)
+                singularities(singularities_number, 4) = s_index;
+              end
           end
         end
       end

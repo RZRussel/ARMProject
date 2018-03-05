@@ -17,7 +17,7 @@ link2.axis = [1 0 0];
 
 link3.type = "L";
 link3.length = 96.56603957913983;
-link3.axis = [0.932004671541296 0 0.36244626115494843];
+link3.axis = [1 0 0];
 
 link4.type = "L";
 link4.length = 330;
